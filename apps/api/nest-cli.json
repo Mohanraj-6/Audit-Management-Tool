@@ -1,0 +1,6 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "extensions": [".ts"],
+  "addFiles": ["**/*.entity.ts", "**/*.module.ts"]
+}

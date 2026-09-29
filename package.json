@@ -1,0 +1,22 @@
+{
+  "name": "audit-management-system",
+  "version": "1.0.0",
+  "description": "Professional internal Audit Management System",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev:api": "cd apps/api && npm run start:dev",
+    "dev:web": "cd apps/web && npm run dev",
+    "dev": "docker compose up -d postgres redis minio && cd apps/api && npm run start:dev",
+    "build": "docker compose build",
+    "up": "docker compose up -d",
+    "down": "docker compose down -v",
+    "logs": "docker compose logs -f"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
